@@ -3,11 +3,28 @@
 
 <br />
 
-Projeto para criar um React-JS app de um jogo de , em que usa como dados para as perguntas a API externa Trivia API.:[^1]
+Projeto que usa como dados de uma a API externa de Trivia para renderizar perguntas aos usuários por meio de uma aplicação com React-JS e TypeScript, enquanto controla todas as demais funcionalidades do jogo, como pontuação, etc...:[^1]
+
 
 <br />
 
-......
+Ademais, a aplicação é capaz de requisitar os dados da API passando parâmetros relacionados à experiência do jogo, como, por exemplo, número de questões, dificuldade e área de interesse (inclusive uma área de variedades).
+
+<br />
+
+!(Open Trivia Database)[https://opentdb.com/]
+
+<br />
+
+Dessa forma, é nos parâmetros da URL de requisição que é feita cada uma das opções para o retorno dos dados da API:
+
+<br />
+
+
+```
+const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+```
+
 
 <br />
 

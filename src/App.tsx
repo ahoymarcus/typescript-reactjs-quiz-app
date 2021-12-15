@@ -2,7 +2,7 @@
 //  0hs  38'  40''
 import { useState } from 'react';
 
-import { fetchQuizQuestions } from './API';
+import { QuestionState, fetchQuizQuestions } from './API';
 
 // Components 
 import QuestionCard from './components/QuestionCard';
@@ -14,16 +14,22 @@ import QuestionCard from './components/QuestionCard';
 
 // types
 import { Difficulty } from './API';
-   
+  
+type AnswerObject = {
+	question: string;
+	answer: string;
+	correct: boolean;
+	correctAnswer: string;
+};
+	
 
 const TOTAL_QUESTIONS = 10; 
   
- 
 const App = () => {
 	const [ loading, setLoading ] = useState(false);
-	const [ questions, setQuestions ] = useState([]);
+	const [ questions, setQuestions ] = useState<QuestionState[]>([]);
 	const [ number, setNumber ] = useState(0);
-	const [ userAnswers, setUserAnswers ] = useState([]);
+	const [ userAnswers, setUserAnswers ] = useState<AnswerObject[]>([]);
 	const [ score, setScore ] = useState(0);
 	const [ gameOver, setGameOver ] = useState(true);
 	
@@ -31,6 +37,23 @@ const App = () => {
 	console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY));
 	
 	const startTrivia = async () => {
+		setLoading(true);
+		setGameOver(false);
+		
+		try {
+			const newQuestions = await fetchQuizQuestions(
+				TOTAL_QUESTIONS,
+				Difficulty.EASY
+			);
+			
+			setQuestions(newQuestions);
+			setScore(0);
+			setUserAnswers([]);
+			setNumber(0);
+			setLoading(false);
+		} catch (err) {
+			console.log(err);
+		}
 		
 	};
 	
