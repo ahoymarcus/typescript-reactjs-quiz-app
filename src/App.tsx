@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  0hs  57'  38''
+//  1hs  7'  00''
 import { useState } from 'react';
 
 import { QuestionState, fetchQuizQuestions } from './API';
@@ -8,7 +8,7 @@ import { QuestionState, fetchQuizQuestions } from './API';
 import QuestionCard from './components/QuestionCard';
 
 // Styles
-import { GlobalStyle } from './App.styles';
+import { GlobalStyle, Wrapper } from './App.styles';
 
 // types
 import { Difficulty } from './API';
@@ -93,7 +93,7 @@ const App = () => {
 	return ( 
 		<>
 			<GlobalStyle />
-			<div>
+			<Wrapper>
 				<h1>REACT QUIZ</h1>
 				{gameOver || userAnswers.length === TOTAL_QUESTIONS ? 
 				(<button className="start" onClick={startTrivia}>
@@ -120,7 +120,7 @@ const App = () => {
 					</button>
 				) : null }
 				
-			</div>
+			</Wrapper>
 		</>
   );
 };
