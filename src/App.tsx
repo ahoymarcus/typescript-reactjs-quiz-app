@@ -2,12 +2,14 @@
 //  0hs  17'  39''
 import { useState } from 'react';
 
+import { fetchQuizQuestions } from './API';
+
 // Components 
 import QuestionCard from './components/QuestionCard';
 
 
 // Styles
-
+ 
 
 
 // types
@@ -48,22 +50,22 @@ const App = () => {
 			</button>
 			<p className="score">Score:</p>
 			<p>Loading Questions...</p>
-			<QuestionCard 
+			{/*<QuestionCard 
 				questionNr={number + 1}
 				totalQuestions={TOTAL_QUESTIONS}
 				question={questions[number].question}
 				answers={questions[number].answers}
 				userAnswer={userAnswers ? userAnswers[number] : undefined }
 				callback={checkAnswer}
-			/>
+			/> */}
 			<button className="nest" onClick={nextQuestion}>
 				Next Question
 			</button>
 		</div>
   );
 };
-
-
+  
+ 
 
 export default App;
 
