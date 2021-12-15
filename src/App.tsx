@@ -113,7 +113,7 @@ const App = () => {
 				)} 
 				{!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS -1 ? (
 					<button 
-						className="nest" 
+						className="next" 
 						onClick={nextQuestion}
 					>
 						Next Question
