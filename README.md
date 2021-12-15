@@ -12,7 +12,7 @@ Ademais, a aplicação é capaz de requisitar os dados da API passando parâmetr
 
 <br />
 
-(Open Trivia Database)[https://opentdb.com/]
+[Open Trivia Database](https://opentdb.com/)
 
 <br />
 

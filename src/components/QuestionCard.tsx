@@ -2,15 +2,22 @@ import React from 'react';
 
 
 // Types
+import { AnswerObject } from '../App';
+
 type Props = {
 	question: string;
 	answers: string[];
-	callback: any;
-	userAnswer: any;
+	callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
+	userAnswer: AnswerObject | undefined;
 	questionNr: number;
 	totalQuestions: number;
 };
 
+
+/*
+	Atenção, para a conversão feita no elemento de botão abaixo, poderia ter sido usada também a sintaxe seguinte:
+	<button disabled={!!answer} ...>
+*/
 const QuestionCard: React.FC<Props> = ({ 	
 	question, 
 	answers, 
@@ -28,7 +35,7 @@ const QuestionCard: React.FC<Props> = ({
 			{answers.map((answer, index) => (
 				<div key={answer}>
 					<button 
-						disabled={userAnswer} 
+						disabled={userAnswer ? true : false} 
 						value={answer}
 						onClick={callback} 
 					>

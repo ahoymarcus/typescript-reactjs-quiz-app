@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  0hs  49'  40''
+//  0hs  57'  38''
 import { useState } from 'react';
 
 import { QuestionState, fetchQuizQuestions } from './API';
@@ -15,7 +15,7 @@ import QuestionCard from './components/QuestionCard';
 // types
 import { Difficulty } from './API';
   
-type AnswerObject = {
+export type AnswerObject = {
 	question: string;
 	answer: string;
 	correct: boolean;
@@ -81,7 +81,14 @@ const App = () => {
 	};
 	
 	const nextQuestion = () => {
+		// Movo on to the next question, if its not the last
+		const nextQuestion = number + 1;
 		
+		if (nextQuestion === TOTAL_QUESTIONS) {
+			setGameOver(true);
+		} else {
+			setNumber(nextQuestion);
+		}
 	};
 	
 	
