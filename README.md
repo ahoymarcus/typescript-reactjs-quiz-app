@@ -35,7 +35,7 @@ Finalmente, a aplicação utiliza uma função auxiliar utilitária para fazer o
 
 <br />
 
-R:
+Versão do App on-line:
 
 - [TypeScript React-JS Quiz App no Netlify](https://typescript-reactjs-quiz-app.netlify.app/)
 
