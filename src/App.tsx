@@ -1,12 +1,12 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  1hs  7'  00''
+//  1hs  10'  00''
 import { useState } from 'react';
 
 import { QuestionState, fetchQuizQuestions } from './API';
-
+   
 // Components 
 import QuestionCard from './components/QuestionCard';
-
+ 
 // Styles
 import { GlobalStyle, Wrapper } from './App.styles';
 
@@ -20,7 +20,7 @@ export type AnswerObject = {
 	correctAnswer: string;
 };
 	
-
+ 
 const TOTAL_QUESTIONS = 10; 
   
 const App = () => {
