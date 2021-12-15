@@ -3,7 +3,7 @@
 
 <br />
 
-Projeto que usa como dados de uma a API externa de Trivia para renderizar perguntas aos usuários por meio de uma aplicação com React-JS e TypeScript, enquanto controla todas as demais funcionalidades do jogo, como pontuação, etc...:[^1]
+Projeto que usa como dados de uma a API externa de Trivia para renderizar perguntas aos usuários por meio de uma aplicação com React-JS e TypeScript, enquanto controla todas as demais funcionalidades do jogo, como botão de inicialização do jogo, pontuação, próxima pergunta, entre outros:[^1]
 
 
 <br />
@@ -12,7 +12,7 @@ Ademais, a aplicação é capaz de requisitar os dados da API passando parâmetr
 
 <br />
 
-!(Open Trivia Database)[https://opentdb.com/]
+(Open Trivia Database)[https://opentdb.com/]
 
 <br />
 
