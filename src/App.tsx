@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  0hs  44'  40''
+//  0hs  49'  40''
 import { useState } from 'react';
 
 import { QuestionState, fetchQuizQuestions } from './API';
@@ -58,7 +58,26 @@ const App = () => {
 	};
 	
 	const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-		
+		if (!gameOver) {
+			// Users answer
+			const answer = e.currentTarget.value;
+			
+			// Check answer agains correct answer
+			const correct = questions[number].correct_answer === answer;
+			
+			// Add score if answer is correct
+			if (correct) setScore(prev => prev + 1);
+			
+			// Save answer in the array for user answers
+			const answerObject = {
+				question: questions[number].question,
+				answer,
+				correct,
+				correctAnswer: questions[number].correct_answer,
+			};
+			
+			setUserAnswers((prev) => [ ...prev, answerObject ]);
+		}
 	};
 	
 	const nextQuestion = () => {
