@@ -37,7 +37,7 @@ Finalmente, a aplicação utiliza uma função auxiliar utilitária para fazer o
 
 R:
 
-- [App ............. no Netlify]()
+- [TypeScript React-JS Quiz App no Netlify](https://typescript-reactjs-quiz-app.netlify.app/)
 
 <br />
 
