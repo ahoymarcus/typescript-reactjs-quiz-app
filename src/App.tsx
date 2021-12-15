@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  4hs 20'  50''
+//  0hs  9'  39''
 
 
 // Components 
@@ -18,7 +18,17 @@
  
  
 const App = () => {
+	const startTrivi = async () => {
+		
+	};
 	
+	const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+		
+	};
+	
+	const nextQuestion = () => {
+		
+	};
 	
 	
 	
@@ -27,8 +37,12 @@ const App = () => {
 			TypeScript App
 		</div>
   );
-}
+};
+
+
 
 export default App;
+
+
 
 
