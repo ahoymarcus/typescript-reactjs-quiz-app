@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  0hs  38'  40''
+//  0hs  44'  40''
 import { useState } from 'react';
 
 import { QuestionState, fetchQuizQuestions } from './API';
@@ -33,8 +33,8 @@ const App = () => {
 	const [ score, setScore ] = useState(0);
 	const [ gameOver, setGameOver ] = useState(true);
 	
-	
-	console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY));
+	 
+	console.log(questions);
 	
 	const startTrivia = async () => {
 		setLoading(true);

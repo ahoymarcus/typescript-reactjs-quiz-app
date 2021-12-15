@@ -18,11 +18,14 @@ Ademais, a aplicação é capaz de requisitar os dados da API passando parâmetr
 
 Dessa forma, é nos parâmetros da URL de requisição que é feita cada uma das opções para o retorno dos dados da API:
 
+- amount
+- difficulty
+- type
+
 <br />
 
-
 ```
-const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+`https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
 ```
 
 
