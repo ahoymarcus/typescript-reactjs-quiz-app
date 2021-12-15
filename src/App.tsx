@@ -1,9 +1,9 @@
 // https://www.youtube.com/watch?v=F2JCjVSZlG0
-//  0hs  9'  39''
+//  0hs  17'  39''
 
 
 // Components 
-
+import QuestionCard from './components/QuestionCard';
 
 
 // Styles
@@ -18,7 +18,7 @@
  
  
 const App = () => {
-	const startTrivi = async () => {
+	const startTrivia = async () => {
 		
 	};
 	
@@ -34,7 +34,16 @@ const App = () => {
 	
 	return ( 
     <div>
-			TypeScript App
+			<h1>REACT QUIZ</h1>
+			<button className="start" onClick={startTrivia}>
+				Start
+			</button>
+			<p className="score">Score:</p>
+			<p>Loading Questions...</p>
+			<QuestionCard />
+			<button className="nest" onClick={nextQuestion}>
+				Next Question
+			</button>
 		</div>
   );
 };
