@@ -31,7 +31,7 @@ Dessa forma, é nos parâmetros da URL de requisição que é feita cada uma das
 
 <br />
 
-Finalmente, ........ 
+Finalmente, a aplicação utiliza uma função auxiliar utilitária para fazer o embaralhamento do array com as perguntas, para mudar randomicamente as posições de renderização das listas de perguntas.
 
 <br />
 
@@ -49,17 +49,27 @@ Dependências:
 <br />
 
 
-### I:
+### Tela inicial do Quiz App:
 
-![Imagem do App renderizando produtos nas prateleiras da loja](/public/images/)
+![Imagem da Tela inicial do Quiz App](/public/images/typescript-reactjs-quiz-app-01.png)
 
 
 <br />
 
 
-### I:
+### Imagem da tela do jogo renderizando o acerto do jogador junto com a contabilização de resposta certa:
 
-![Imagem do App renderizando produtos selecionados no carrinho de compra](/public/images/)
+![Imagem da tela com a contabilização de resposta certa](/public/images/typescript-reactjs-quiz-app-02.png)
+
+
+
+<br />
+
+
+### Imagem da tela do jogo renderizando o erro do jogador e qual seria a resposta correta:
+
+![Imagem da tela do jogo renderizando o erro do jogador e qual seria a resposta correta](/public/images/typescript-reactjs-quiz-app-03.png)
+
 
 
 
